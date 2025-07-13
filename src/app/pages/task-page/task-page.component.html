@@ -1,0 +1,26 @@
+
+@if(task){
+
+<div  class="flex flex-col items-center py-14 px-4 font-serif border rounded-xl  bg-gray-300 container text-center text-xl">
+  
+    <h2><strong>Заголовок:</strong></h2>
+    <h2 [class.completed]="task.status">{{ task.title }}</h2>
+    
+    <div *ngIf="task.description" class="task-description">
+      <h3><strong>Описание:</strong></h3>
+      <p>{{ task.description }}</p>
+    </div>
+    
+    <div class="task-meta">
+      <p><strong>Статус:</strong> 
+        <span [class.completed]="task.status">
+          {{ task.status ? 'Выполнена' : 'В работе' }}
+        </span>
+      </p>
+      <p><strong>Создана:</strong> {{ task.createdAt | date:'fullDate' }}</p>
+  <button (click)="goBack()" class="mt-6 w-60  border-transparent  rounded bg-slate-100 hover:bg-gray-400 active:bg-gray-500">Вернуться к списку задач</button>
+
+    </div>
+</div>
+
+}

@@ -1,0 +1,40 @@
+<div class="flex flex-col justify-center items-center w-full font-semibold mb-6">
+  <form [formGroup]="taskForm" (ngSubmit)="onSubmit()" class="task-form">
+      <input 
+        type="text" 
+        id="title" 
+        formControlName="title"
+        class="cursor-text border-solid border border-black rounded-xl border-borderColor py-4 px-6 w-full mb-2 text-lg  "
+        placeholder="Заголовок"
+      >
+        @if(taskForm.controls["title"].invalid && taskForm.controls["title"].touched){
+           <div class="text-lg mt-2">Не указан заголовок задачи </div>
+        }
+      <textarea 
+        id="description" 
+        placeholder="Описание"
+        formControlName="description" 
+        class="cursor-text border-solid border rounded-xl border-borderColor py-4 px-6  mb-2 text-lg border-black "
+        rows="3"
+      ></textarea>
+    
+
+      <div class="flex justify-between items-center w-full text-sm md:text-base">
+        <button 
+          type="button" 
+          (click)="onSubmit()"
+          [disabled]="taskForm.invalid" 
+          class="border border-transparent w-5/12  h20  bg-slate-100 rounded-xl  hover:bg-gray-400 active:bg-gray-500 "
+        >
+          Добавить задачу
+        </button>
+        <button 
+          type="button" 
+          (click)="onCancel()" 
+          class="border border-transparent w-5/12 h20  bg-slate-100 rounded-xl  hover:bg-gray-400 active:bg-gray-500 "
+        >
+          Очистить форму
+        </button>
+    </div>
+  </form>
+</div>
