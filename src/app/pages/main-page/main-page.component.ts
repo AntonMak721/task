@@ -11,7 +11,6 @@ import { TasksListComponent } from '../../components/tasks-list/tasks-list.compo
     TasksListComponent,
   ],
   templateUrl: './main-page.component.html',
-  styleUrl: './main-page.component.scss'
 })
 export class MainPageComponent {
   

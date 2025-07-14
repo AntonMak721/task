@@ -9,7 +9,7 @@ export class TaskService {
   private nextId = 0;
 
   constructor() {
-    // Initialize with some sample tasks
+   
     this.addTask({ title: 'Собрать чемодан', description: 'Собрать чемодан в путешествие...'});
     this.addTask({ title: 'Выключить телефон', description: 'Отдых.'});
   }
@@ -28,12 +28,10 @@ export class TaskService {
     id: ++this.nextId,
     title: task.title,
     description: task.description,
-    status: false, // статус по умолчанию
-    createdAt: new Date() // текущая дата
+    status: false, 
+    createdAt: new Date() 
   };
   this.tasks.push(newTask);
-  console.log(this.tasks)
-  console.log(newTask)
   return newTask;
 }
 

@@ -5,5 +5,7 @@ import { TaskPageComponent} from './pages/task-page/task-page.component';
 export const routes: Routes = [
 
     { path: '', component: MainPageComponent},
-    { path: 'tasks/:id', component: TaskPageComponent,}
+    { path: 'tasks/:id', component: TaskPageComponent,},
+    { path: '**', redirectTo: '',}
+
 ];

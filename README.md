@@ -1,27 +1,90 @@
-# Mbtd
+# Task Manager - Angular Application
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.1.0.
+## Описание
 
-## Development server
+Простое Angular-приложение для управления задачами с возможностями:
+- Просмотра списка задач
+- Добавления новых задач
+- Удаления задач
+- Просмотра деталей задачи
+- Изменения статуса задачи
+- Поиска и фильтрации задач
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## Требования
 
-## Code scaffolding
+- Node.js (версия 16.x или выше)
+- npm (версия 8.x или выше) или yarn
+- Angular CLI (версия 18)
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Установка
 
-## Build
+1. Клонируйте репозиторий:
+```bash
+git clone https://github.com/your-repository/task-manager.git
+cd task-manager
+```
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+2. Установите зависимости:
+```bash
+npm install
+# или
+yarn install
+```
 
-## Running unit tests
+## Запуск приложения
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+1. Запустите сервер разработки:
+```bash
+ng serve
+```
 
-## Running end-to-end tests
+2. Откройте приложение в браузере:
+```
+http://localhost:4200
+```
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+## Сборка для production
 
-## Further help
+Для сборки оптимизированной версии приложения выполните:
+```bash
+ng build --configuration production
+```
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+Собранные файлы будут доступны в папке `dist/task-manager`.
+
+## Структура проекта
+
+```
+src/
+├── app/
+│   ├── components/
+│   │   ├── task-list/       # Компонент списка задач
+│   │   ├── task-form/       # Форма добавления/редактирования
+│   │   └── task-details/    # Детали задачи
+│   ├── models/
+│   │   └── task.model.ts    # Интерфейсы задач
+│   ├── services/
+│   │   └── task.service.ts  # Логика работы с задачами
+│   ├── app-routing.module.ts # Маршрутизация
+│   └── app.module.ts        # Главный модуль
+├── assets/                  # Статические файлы
+└── styles/                  # Глобальные стили
+```
+
+## Используемые технологии
+
+- Angular 18
+- TypeScript
+- RxJS
+- Reactive Forms
+- SCSS для стилей
+
+## Доступные команды
+
+- `ng serve` - запуск dev-сервера
+- `ng build` - сборка проекта
+- `ng lint` - проверка кода линтером
+
+## Лицензия
+
+[MIT License](LICENSE)

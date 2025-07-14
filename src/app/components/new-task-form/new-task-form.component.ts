@@ -10,7 +10,6 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
   imports: [FormsModule,
         ReactiveFormsModule],
   templateUrl: './new-task-form.component.html',
-  styleUrl: './new-task-form.component.scss'
 })
 export class NewTaskFormComponent implements OnInit {
   taskForm!: FormGroup;

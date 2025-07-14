@@ -12,7 +12,6 @@ import { FormsModule } from "@angular/forms";
   standalone: true,
   imports: [NgClass, NewTaskFormComponent, NgIf,FormsModule ],
   templateUrl: './tasks-list.component.html',
-  styleUrl: './tasks-list.component.scss'
 })
 export class TasksListComponent implements OnInit {
   tasks: TaskInterface[] = [];
